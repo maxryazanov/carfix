@@ -4,7 +4,7 @@ let selectedCarId = null;
 function register() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    fetch('http://localhost:3001/register', {
+    fetch('https://carfix-backend.onrender.com/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -17,7 +17,7 @@ function register() {
 function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
-    fetch('http://localhost:3001/login', {
+    fetch('https://carfix-backend.onrender.com/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })
@@ -42,7 +42,7 @@ function loadCars() {
         return;
     }
 
-    fetch('http://localhost:3001/cars', {
+    fetch('https://carfix-backend.onrender.com/cars', {
         headers: { 'Authorization': `Bearer ${token}` }
     })
     .then(res => {
@@ -96,7 +96,7 @@ function addCar() {
 
     console.log("Добавляем машину:", { make, year, vin, plate });
 
-    fetch('http://localhost:3001/cars', {
+    fetch('https://carfix-backend.onrender.com/cars', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ function deleteCar(id) {
         return;
     }
 
-    fetch(`http://localhost:3001/cars/${id}`, {
+    fetch(`https://carfix-backend.onrender.com/cars/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
     })
@@ -144,7 +144,7 @@ function viewMaintenance(carId) {
     }
 
     selectedCarId = carId;
-    fetch(`http://localhost:3001/maintenance?car_id=${carId}`, {
+    fetch(`https://carfix-backend.onrender.com/maintenance?car_id=${carId}`, {
         headers: { 'Authorization': `Bearer ${token}` }
     })
     .then(res => res.json())
@@ -189,7 +189,7 @@ function addMaintenance() {
     const mileage = document.getElementById('maintenance-mileage').value;
     const details = document.getElementById('maintenance-details').value;
     
-    fetch('http://localhost:3001/maintenance', {
+    fetch('https://carfix-backend.onrender.com/maintenance', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -212,7 +212,7 @@ function deleteMaintenance(id) {
         return;
     }
 
-    fetch(`http://localhost:3001/maintenance/${id}`, {
+    fetch(`https://carfix-backend.onrender.com/maintenance/${id}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
     })
