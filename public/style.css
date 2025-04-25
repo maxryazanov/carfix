@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box!important;
+    font-family: 'Courier New', Courier, monospace!important;
+}
+body{
+    background: #262626;
+    color: #fff;
+    margin: 0;
+}
+.title{
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+}
+#app{
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background: #242424;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#auth{
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+}
+button{
+    min-width: 80px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    background: #0056b3;
+}
+#auth h2{
+    margin: 0;
+    font-size: 1.5em;
+}
+#dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#dashboard h2{
+    margin: 0 0 20px;
+    font-size: 1.5em;
+}
+
+#cars-list{
+    background-color: #333;
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#cars-list div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+#cars-list div button{
+    width: 100px;
+}
+#cars-list div :first-child{
+    margin-left: 150px;
+}
+#cars-list div button:hover{
+    background: #0056b3;
+}
+#logout{
+    
+    width: 80px;
+    background: #dc3545;
+}
+#logout:hover{
+    background: #c82333;
+}
+
+#maintenance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#maintenance h2{
+    margin: 0 0 20px;
+    font-size: 1.5em;
+}
+#maintenance-list div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+#maintenance-list div button{
+    width: 100px;
+    background: red;
+    color: #fff;
+}
+#maintenance-list div button:hover{
+    background: #c82333;
+}

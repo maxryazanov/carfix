@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarFix</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1 class="title">CarFix</h1>
+            <button id="logout" onclick="logout()" style="display: none;">Выйти</button>
+        </div>
+            
+        <div id="auth">
+            <h2>Вход / Регистрация</h2>
+            <input type="text" id="username" placeholder="Имя пользователя">
+            <input type="password" id="password" placeholder="Пароль">
+            <button onclick="login()">Войти</button>
+            <button onclick="register()">Зарегистрироваться</button>
+        </div>
+        
+        <div id="dashboard" style="display: none;">
+            <h2>Мои автомобили</h2>
+            <div id="cars-list"></div>
+            <button onclick="showAddCarForm()">Добавить машину</button>
+        </div>
+
+        <div id="add-car" style="display: none;">
+            <h2>Добавить автомобиль</h2>
+            <input type="text" id="car-make" placeholder="Марка*">
+            <input type="number" id="car-year" placeholder="Год выпуска*">
+            <input type="text" id="car-vin" placeholder="VIN*">
+            <input type="text" id="car-plate" placeholder="Гос. номер*">
+            <button onclick="addCar()">Добавить</button>
+            <button onclick="showDashboard()">Назад</button>
+        </div>
+
+        <div id="maintenance" style="display: none;">
+            <h2>Записи ТО</h2>
+            <div id="maintenance-list"></div>
+            <button onclick="showAddMaintenanceForm()">Добавить запись ТО</button>
+            <button onclick="showDashboard()">Назад</button>
+        </div>
+
+        <div id="add-maintenance" style="display: none;">
+            <h2>Добавить запись ТО</h2>
+            <input type="date" id="maintenance-date">
+            <input type="number" id="maintenance-mileage" placeholder="Пробег">
+            <input type="text" id="maintenance-details" placeholder="Что меняли">
+            <button onclick="addMaintenance()">Добавить</button>
+            <button onclick="showMaintenance()">Назад</button>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
