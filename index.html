@@ -49,7 +49,7 @@
         <div id="add-maintenance" style="display: none;">
             <h2>Добавить запись ТО</h2>
             <input type="date" id="maintenance-date">
-            <input type="number" min="0" max="9999999" id="maintenance-mileage" placeholder="Пробег">
+            <input type="text" inputmode="numeric" pattern="\d{1,7}" maxlength="7" id="maintenance-mileage" placeholder="Пробег">
             <input type="text" id="maintenance-details" placeholder="Что меняли">
             <button onclick="addMaintenance()">Добавить</button>
             <button onclick="showMaintenance()">Назад</button>
